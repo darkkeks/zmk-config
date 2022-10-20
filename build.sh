@@ -18,6 +18,6 @@ mkdir -p "$ZMK_CONFIG_ROOT/build"
 
 matrix | while read -r board shield; do
     echo Building board=$board shield=$shield ...
-    (cd "$ZMK_ROOT"; west build -p -s app -d "build/$board/$shield" -b "$board" -- -DSHIELD="$shield" -DZMK_CONFIG="$ZMK_CONFIG_ROOT/config")
+    (cd "$ZMK_ROOT"; west build -s app -d "build/$board/$shield" -b "$board" -- -DSHIELD="$shield" -DZMK_CONFIG="$ZMK_CONFIG_ROOT/config")
     cp "$ZMK_ROOT/build/$board/$shield/zephyr/zmk.uf2" "$ZMK_CONFIG_ROOT/build/$board-$shield.uf2"
 done 
