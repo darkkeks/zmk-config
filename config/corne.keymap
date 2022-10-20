@@ -11,6 +11,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+&sk {
+  quick-release;
+};
+
 / {
   behaviors {
     hm: homerow_mods {
