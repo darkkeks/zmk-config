@@ -8,7 +8,7 @@ ZMK_ROOT=$(pwd)/../zmk
 MATRIX_FILE=$ZMK_CONFIG_ROOT/build.yaml
 
 export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
-export GNUARMEMB_TOOLCHAIN_PATH=/usr/local/Cellar/arm-gcc-bin\@8/8-2019-q3-update_2/
+export GNUARMEMB_TOOLCHAIN_PATH=/usr/local/Cellar/arm-gcc-bin\@8/8-2019-q3-update_3/
 
 function matrix {
     yq -r '.include[] | (.board + " " + .shield)' "$MATRIX_FILE"
